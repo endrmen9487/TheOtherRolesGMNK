@@ -12,9 +12,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 This mod is based on the mod [The Other Roles GM IA rebuild](https://github.com/dabao40/TheOtherRolesGMIA) made by [imp11](https://github.com/dabao40)  
 =======
-<p align="center">
-<a href="mailto:dabaoliu2019@163.com" target="_blank"><img src="https://img.shields.io/badge/Gmail%20-%231DA1F2.svg?&style=for-the-badge&logo=gmail&logoColor=white&color=ea4335"/></a></p>
-<p align="center">
+
 <a href="https://github.com/dabao40/TheOtherRolesGMIA/releases/"><img src="https://badgen.net/github/release/dabao40/theotherrolesgmia"></a></p>
 
 
