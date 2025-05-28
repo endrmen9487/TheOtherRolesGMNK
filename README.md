@@ -2283,7 +2283,6 @@ For the functionality of the roles in TheOtherRoles GM IA, please take a look at
 
 ## Artists
 - [Fangkuai](https://github.com/FangkuaiYa)
-- 
 - [NotKomi](https://github.com/endrmen9487)
 
 ## Translators
@@ -2292,6 +2291,7 @@ For the functionality of the roles in TheOtherRoles GM IA, please take a look at
 - [yuunozikkyou](https://github.com/yuunozikkyou)
 - [unhappyset](https://github.com/unhappyset)
 - [KS](https://github.com/Ks-777)
+- [NotKomi](https://github.com/endrmen9488)
 
 # Credits & Resources
 
