@@ -3,7 +3,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 ![LOGO](https://github.com/endrmen9487/TheOtherRolesGMNK/blob/main/Banner.png)  
 [![Discord](./Images/TOR_server.png)](https://discord.gg/w7msq53dq7)
 
-<<<<<<< Updated upstream
+
 
 
 <p align="center">
