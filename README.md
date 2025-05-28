@@ -2277,11 +2277,14 @@ For the functionality of the roles in TheOtherRoles GM IA, please take a look at
 # The Other Roles GM IA Team
 
 ## Developers
+- [NotKomi](https://github.con/endrmen9487)
 - [Imp11](https://github.com/dabao40)  
 - [Among us](https://github.com/XiezibanWrite)
 
 ## Artists
 - [Fangkuai](https://github.com/FangkuaiYa)
+- 
+- [NotKomi](https://github.com/endrmen9487)
 
 ## Translators
 - [LezaiYa](https://github.com/LezaiYa)  
