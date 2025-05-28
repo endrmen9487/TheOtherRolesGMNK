@@ -111,6 +111,11 @@ namespace TheOtherRoles
         public static CustomButton freePlaySuicideButton;
         public static CustomButton freePlayReviveButton;
         public static CustomButton eventKickButton;
+
+        //GMNK Roles
+
+        public static CustomButton greaneyemonsterButton;
+
         //public static CustomButton trapperButton;
         //public static CustomButton bomberButton;
         //public static CustomButton defuseButton;
@@ -217,6 +222,7 @@ namespace TheOtherRoles
             archaeologistDetectButton.MaxTimer = Archaeologist.cooldown;
             archaeologistExcavateButton.MaxTimer = Archaeologist.cooldown;
             doomsayerButton.MaxTimer = Doomsayer.cooldown;
+            greaneyemonsterButton.MaxTimer = GreanEyeMonster.cooldown;
             foreach (var button in fortuneTellerButtons)
             {
                 button.MaxTimer = 0f;

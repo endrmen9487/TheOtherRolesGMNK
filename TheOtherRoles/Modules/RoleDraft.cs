@@ -548,7 +548,7 @@ namespace TheOtherRoles.Modules
             }
         }
 
-        class PatchedEnumerator() : IEnumerable
+        class PatchedEnumerator : IEnumerable
         {
             public IEnumerator enumerator;
             public IEnumerator Postfix;

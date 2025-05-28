@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheOtherRoles.Patches;
 using TheOtherRoles.Utilities;
+
+
 
 namespace TheOtherRoles.Patches
 {
     using FakeVitalsParam = (byte playerId, VitalsState state);
+
     public enum VitalsState
     {
         Disconnected,

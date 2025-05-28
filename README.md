@@ -3,6 +3,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 ![LOGO](https://github.com/endrmen9487/TheOtherRolesGMNK/blob/main/Banner.png)  
 [![Discord](./Images/TOR_server.png)](https://discord.gg/w7msq53dq7)
 
+<<<<<<< Updated upstream
 
 
 <p align="center">
@@ -10,13 +11,23 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 
 This mod is based on the mod [The Other Roles GM IA rebuild](https://github.com/dabao40/TheOtherRolesGMIA) made by [imp11](https://github.com/dabao40)  
+=======
+<p align="center">
+<a href="mailto:dabaoliu2019@163.com" target="_blank"><img src="https://img.shields.io/badge/Gmail%20-%231DA1F2.svg?&style=for-the-badge&logo=gmail&logoColor=white&color=ea4335"/></a></p>
+<p align="center">
+<a href="https://github.com/dabao40/TheOtherRolesGMIA/releases/"><img src="https://badgen.net/github/release/dabao40/theotherrolesgmia"></a></p>
+
+
+This mod is based on the mod [The Other Roles GM IA](https://github.com/dabao40/TheOtherRolesGMIA) made by [imp11](https://github.com/dabao40)  
+>>>>>>> Stashed changes
 We are only a team of teenagers, and we may not be able to make this mod like any other mods. Feel free to give suggestions or to pull any requests.  
 
 # Releases
 
 | Among Us - Version | Mod Version | Link                                                         |
 | ------------------ | ----------- | ------------------------------------------------------------ |
-| 16.0.4s            | v1.3.3     | [Download](https://github.com/dabao40/TheOtherRolesGMIA/releases/tag/1.3.3) |
+| Under this line all is TORGMIA           | Old version    | [Download](https://www.youtube.com/watch?v=dQw4w9WgXcQ)|
+| 16.0.4s            | v1.3.3     | [Download](https://github.com/dabao40/TheOtherRolesGMIA/releases/tag/1.3.3)|
 | 2024.11.26s        | v1.3.2     | [Download](https://github.com/dabao40/TheOtherRolesGMIA/releases/tag/1.3.2) |
 | 2024.11.26s        | v1.3.1     | [Download](https://github.com/dabao40/TheOtherRolesGMIA/releases/tag/1.3.1) |
 | 2024.10.29s        | v1.3.0     | [Download](https://github.com/dabao40/TheOtherRolesGMIA/releases/tag/1.3.0) |

@@ -420,6 +420,17 @@ namespace TheOtherRoles {
 
         public static CustomOption lawyerSpawnRate;
         public static CustomOption lawyerTargetKnows;
+
+        //NotKomi
+
+        public static CustomOption greaneyemonster;
+        public static CustomOption greaneyemonsterSpawnRate;
+        public static CustomOption greaneyemonsterKillCoolDown;
+        public static CustomOption greaneyemonsterWaiForNextMeeting;
+
+        public static CustomOption EvilMayorSpawnRate;
+
+
         //public static CustomOption lawyerIsProsecutorChance;
         public static CustomOption lawyerTargetCanBeJester;
         public static CustomOption lawyerVision;
@@ -1128,6 +1139,12 @@ namespace TheOtherRoles {
             moriartyBrainwashTime = CustomOption.Create(8032, Types.Neutral, "moriartyBrainwashTime", 30f, 1f, 60f, 1f, moriartySpawnRate, false, "unitSeconds");
             moriartyNumberToWin = CustomOption.Create(8033, Types.Neutral, "moriartyNumberToWin", 3f, 1f, 10f, 1f, moriartySpawnRate, false, "unitScrews");
             moriartyKillIndicate = CustomOption.Create(8044, Types.Neutral, "moriartyKillIndicate", false, moriartySpawnRate);
+
+            //NotKomi
+
+            greaneyemonster = CustomOption.Create(987, Types.Neutral, "GreanEyeMonsterJealousCooldown", 30f, 10f, 60f, 2.5f, greaneyemonsterSpawnRate, false, "unitSeconds");
+            greaneyemonsterKillCoolDown = CustomOption.Create(988, Types.Neutral, "GreanEyeMonsterKillCooldown", 30f, 10f, 60f, 2.5f, greaneyemonsterSpawnRate, false, "unitSeconds");
+            greaneyemonsterSpawnRate = CustomOption.Create(989, Types.Neutral, cs(Thief.color, "thief"), rates, null, true);
 
             /*trapperSpawnRate = CustomOption.Create(410, Types.Crewmate, cs(Trapper.color, "Trapper"), rates, null, true);
             trapperCooldown = CustomOption.Create(420, Types.Crewmate, "Trapper Cooldown", 30f, 5f, 120f, 5f, trapperSpawnRate);
