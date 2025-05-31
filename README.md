@@ -3,7 +3,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 ![LOGO](https://github.com/endrmen9487/TheOtherRolesGMNK/blob/main/Banner.png)  
 [![Discord](./Images/TOR_server.png)](https://discord.gg/w7msq53dq7)
 
-<<<<<<< Updated upstream
+
 
 
 <p align="center">
@@ -12,9 +12,7 @@ This mod is not affiliated with Among Us or Innersloth LLC, and the content cont
 
 This mod is based on the mod [The Other Roles GM IA rebuild](https://github.com/dabao40/TheOtherRolesGMIA) made by [imp11](https://github.com/dabao40)  
 =======
-<p align="center">
-<a href="mailto:dabaoliu2019@163.com" target="_blank"><img src="https://img.shields.io/badge/Gmail%20-%231DA1F2.svg?&style=for-the-badge&logo=gmail&logoColor=white&color=ea4335"/></a></p>
-<p align="center">
+
 <a href="https://github.com/dabao40/TheOtherRolesGMIA/releases/"><img src="https://badgen.net/github/release/dabao40/theotherrolesgmia"></a></p>
 
 
@@ -2279,11 +2277,13 @@ For the functionality of the roles in TheOtherRoles GM IA, please take a look at
 # The Other Roles GM IA Team
 
 ## Developers
+- [NotKomi](https://github.con/endrmen9487)
 - [Imp11](https://github.com/dabao40)  
 - [Among us](https://github.com/XiezibanWrite)
 
 ## Artists
 - [Fangkuai](https://github.com/FangkuaiYa)
+- [NotKomi](https://github.com/endrmen9487)
 
 ## Translators
 - [LezaiYa](https://github.com/LezaiYa)  
@@ -2291,6 +2291,7 @@ For the functionality of the roles in TheOtherRoles GM IA, please take a look at
 - [yuunozikkyou](https://github.com/yuunozikkyou)
 - [unhappyset](https://github.com/unhappyset)
 - [KS](https://github.com/Ks-777)
+- [NotKomi](https://github.com/endrmen9488)
 
 # Credits & Resources
 
