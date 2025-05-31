@@ -411,37 +411,7 @@ namespace TheOtherRoles.Patches {
                     foreach (var v in __instance.vitals) v.gameObject.SetActive(false);
                 }
 
-                var vitals = VitalsStatePatch.VitalsFromActuals;
-                foreach (var v in __instance.vitals)
-                {
-                    var myInfo = vitals.Players.FirstOrDefault(p => p.playerId == v.PlayerInfo.PlayerId);
-                    if (myInfo.state == VitalsState.Disconnected)
-                    {
-                        if (!v.IsDiscon)
-                        {
-                            v.SetDisconnected();
-                        }
-                    }
-                    else if (myInfo.state == VitalsState.Dead && Busker.buskerList.FindAll(x => x == v.PlayerInfo.PlayerId).Count <= 0)
-                    {
-                        if (!v.IsDead)
-                        {
-                            v.SetDead();
-                            v.Cardio.gameObject.SetActive(true);
-                        }
-                    }
-                    else
-                    {
-                        if (v.IsDiscon || v.IsDead)
-                        {
-                            v.IsDiscon = false;
-                            v.IsDead = false;
-                            v.SetAlive();
-                            v.Background.sprite = __instance.PanelPrefab.Background.sprite;
-                            v.Cardio.gameObject.SetActive(true);
-                        }
-                    }
-                }
+                
             }
 
             static bool Prefix(VitalsMinigame __instance)

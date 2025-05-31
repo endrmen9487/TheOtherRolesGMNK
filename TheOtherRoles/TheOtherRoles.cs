@@ -114,6 +114,8 @@ namespace TheOtherRoles
 
             //NotKomi
             GreanEyeMonster.clearAndReload();
+            EvilMayor.clearAndReload();
+            Legislator.clearAndReload();
             
 
 

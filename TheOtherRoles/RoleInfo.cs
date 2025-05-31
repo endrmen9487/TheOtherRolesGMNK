@@ -129,6 +129,7 @@ namespace TheOtherRoles
 
         public static RoleInfo greaneyemonster = new("greaneyemonster", GreanEyeMonster.Color, RoleId.GreanEyeMonster, true);
         public static RoleInfo evilmayor = new("evilmayor", Palette.ImpostorRoleRed, RoleId.EvilMayor, true);
+        public static RoleInfo legislator = new("legislator", Legislator.Color, RoleId.Legislator, true);
 
 
 
@@ -250,6 +251,8 @@ namespace TheOtherRoles
             //NotKomi
 
             greaneyemonster,
+            evilmayor,
+            legislator,
 
         };
 
@@ -348,7 +351,10 @@ namespace TheOtherRoles
             //NotKomi
 
             if (p == GreanEyeMonster.greaneyemonster) infos.Add(greaneyemonster);
-            
+            if (p == EvilMayor.evilmayor) infos.Add(evilmayor);
+            if (p == Legislator.legislator) infos.Add(legislator);
+
+
             if (p == TaskMaster.taskMaster)
             {
                 if (PlayerControl.LocalPlayer.Data.IsDead || includeHidden || !TaskMaster.becomeATaskMasterWhenCompleteAllTasks) infos.Add(taskMaster);

@@ -124,7 +124,8 @@ namespace TheOtherRoles
         //NotKomi
 
         GreanEyeMonster,
-        EvilMayor
+        EvilMayor,
+        Legislator
 
     }
 
