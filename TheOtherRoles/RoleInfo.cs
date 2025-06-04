@@ -125,6 +125,12 @@ namespace TheOtherRoles
         public static RoleInfo hunter = new("hunter", Palette.ImpostorRed, RoleId.Impostor);
         public static RoleInfo hunted = new("hunted", Color.white, RoleId.Crewmate);
 
+        //NotKomi
+
+        public static RoleInfo greaneyemonster = new("greaneyemonster", GreanEyeMonster.Color, RoleId.GreanEyeMonster, true);
+        public static RoleInfo evilmayor = new("evilmayor", Palette.ImpostorRed, RoleId.EvilMayor, true);
+        public static RoleInfo legislator = new("legislator", Legislator.Color, RoleId.Legislator, true);
+
 
 
         // Modifier
@@ -172,6 +178,7 @@ namespace TheOtherRoles
             bomberB,
             evilYasuna,
             yoyo,
+            evilmayor,
             //bomber,
             goodGuesser,
             badGuesser,
@@ -239,8 +246,14 @@ namespace TheOtherRoles
             invert,
             chameleon,
             armored,
-            cupidLover
-            //shifter, 
+            cupidLover,
+            //shifter,
+
+            //NotKomi
+
+            greaneyemonster,
+            legislator,
+
         };
 
         public static List<RoleInfo> getRoleInfoForPlayer(PlayerControl p, bool showModifier = true, bool includeHidden = false) {
@@ -334,6 +347,14 @@ namespace TheOtherRoles
                     infos.Add(info);
                 }
             }
+
+            //NotKomi
+
+            if (p == GreanEyeMonster.greaneyemonster) infos.Add(greaneyemonster);
+            if (p == EvilMayor.evilmayor) infos.Add(evilmayor);
+            if (p == Legislator.legislator) infos.Add(legislator);
+
+
             if (p == TaskMaster.taskMaster)
             {
                 if (PlayerControl.LocalPlayer.Data.IsDead || includeHidden || !TaskMaster.becomeATaskMasterWhenCompleteAllTasks) infos.Add(taskMaster);

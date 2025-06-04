@@ -120,6 +120,13 @@ namespace TheOtherRoles
         Chameleon,
         Armored,
         //Shifter
+
+        //NotKomi
+
+        GreanEyeMonster,
+        EvilMayor,
+        Legislator
+
     }
 
     enum CustomRPC
@@ -259,6 +266,7 @@ namespace TheOtherRoles
         BuskerPseudocide,
         BuskerRevive,
         UnlockMayorAcCommon,
+        unlockEvilMayorAcCommon,
         UnlockDetectiveAcChallenge,
         UnlockMedicAcChallenge,
         UnlockTrackerAcChallenge,
@@ -644,6 +652,16 @@ namespace TheOtherRoles
                         //case RoleId.Bomber:
                         //Bomber.bomber = player;
                         //break;
+
+                        //NK
+
+                    case RoleId.GreanEyeMonster:
+                         GreanEyeMonster.greaneyemonster = player;
+                         break;
+
+                    case RoleId.EvilMayor:
+                         EvilMayor.evilmayor = player;
+                         break;
                     }
         }
         }
@@ -1011,6 +1029,21 @@ namespace TheOtherRoles
                 player.generateNormalTasks();
 
             // Shift role
+
+            //NK Roles
+
+            if (EvilMayor.evilmayor != null && EvilMayor.evilmayor == player)
+            {
+                EvilMayor.evilmayor = oldShifter;
+                EvilMayor.onAchievementActivate();
+            }
+
+            if (GreanEyeMonster.greaneyemonster != null && GreanEyeMonster.greaneyemonster == player)
+            {
+                GreanEyeMonster.greaneyemonster = oldShifter;
+                GreanEyeMonster.onAchievementActivate();
+            }
+
             if (Mayor.mayor != null && Mayor.mayor == player)
             {
                 Mayor.mayor = oldShifter;
@@ -1721,6 +1754,7 @@ namespace TheOtherRoles
             if (player == Trapper.trapper) Trapper.clearAndReload();
             if (player == Blackmailer.blackmailer) Blackmailer.clearAndReload();
             if (player == Yoyo.yoyo) Yoyo.clearAndReload();
+            if (player == EvilMayor.evilmayor) EvilMayor.clearAndReload();
             //if (player == Bomber.bomber) Bomber.clearAndReload();
 
             // Other roles
@@ -1760,6 +1794,8 @@ namespace TheOtherRoles
             if (player == Cupid.cupid) Cupid.clearAndReload(false);
             if (player == SchrodingersCat.schrodingersCat) SchrodingersCat.clearAndReload();
             if (player == Doomsayer.doomsayer) Doomsayer.clearAndReload();
+
+            if (player == GreanEyeMonster.greaneyemonster) GreanEyeMonster.clearAndReload();
 
             // Always remove the Madmate
             if (Madmate.madmate.Any(x => x.PlayerId == player.PlayerId)) Madmate.madmate.RemoveAll(x => x.PlayerId == player.PlayerId);
@@ -2189,6 +2225,16 @@ namespace TheOtherRoles
                 if (!GameManager.Instance.LogicOptions.GetAnonymousVotes())
                     _ = new StaticAchievementToken("mayor.common1");
                 if (Mayor.acTokenChallenge != null) Mayor.acTokenChallenge.Value.votedFor = votedFor;
+            }
+        }
+
+        public static void unlockEvilMayorAcCommon(byte votedFor)
+        {
+            if (PlayerControl.LocalPlayer == EvilMayor.evilmayor)
+            {
+                if (!GameManager.Instance.LogicOptions.GetAnonymousVotes())
+                    _ = new StaticAchievementToken("evilmayor.common1");
+                if (EvilMayor.acTokenChallenge != null) EvilMayor.acTokenChallenge.Value.votedFor = votedFor;
             }
         }
 
@@ -3027,6 +3073,20 @@ namespace TheOtherRoles
                 Yoyo.yoyo = thief;
                 Yoyo.markedLocation = null;
             }
+
+            //NK Roles
+            if (target == GreanEyeMonster.greaneyemonster)
+            {
+                GreanEyeMonster.greaneyemonster = thief;
+                GreanEyeMonster.onAchievementActivate();
+            }
+
+            if (target == EvilMayor.evilmayor)
+            {
+                EvilMayor.evilmayor = thief;
+                EvilMayor.onAchievementActivate();
+            }
+
             //if (target == Bomber.bomber) Bomber.bomber = thief;
             if (target.Data.Role.IsImpostor) {
                 RoleManager.Instance.SetRole(Thief.thief, RoleTypes.Impostor);

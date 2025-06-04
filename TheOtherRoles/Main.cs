@@ -28,14 +28,14 @@ using AmongUs.Data.Player;
 
 namespace TheOtherRoles
 {
-    [BepInPlugin(Id, "The Other Roles GM IA", VersionString)]
+    [BepInPlugin(Id, "The Other Roles GM NK", VersionString)]
     [BepInDependency(SubmergedCompatibility.SUBMERGED_GUID, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInProcess("Among Us.exe")]
     [ReactorModFlags(Reactor.Networking.ModFlags.RequireOnAllClients)]
     public class TheOtherRolesPlugin : BasePlugin
     {
         public const string Id = "me.eisbison.theotherroles";
-        public const string VersionString = "1.3.3";
+        public const string VersionString = "4.8.3.3";
         public static uint betaDays = 0;  // amount of days for the build to be usable (0 for infinite!)
 
         public static Version Version = Version.Parse(VersionString);

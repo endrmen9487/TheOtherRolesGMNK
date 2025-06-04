@@ -112,6 +112,14 @@ namespace TheOtherRoles
             Doomsayer.clearAndReload();
             Husk.clearAndReload();
 
+            //NotKomi
+            GreanEyeMonster.clearAndReload();
+            EvilMayor.clearAndReload();
+            Legislator.clearAndReload();
+            
+
+
+
             // Modifier
             //Bait.clearAndReload();
             Bloody.clearAndReload();
@@ -3845,6 +3853,17 @@ namespace TheOtherRoles
         }
     }
 
+    //GMNotKomi Roles GreanEyeMonster
+
+    //public static PlayerControl godfather;
+   // public static Color color = Palette.ImpostorRed;
+
+   // public static void clearAndReload()
+    //{
+    //    godfather = null;
+    //}
+
+
     public static class Sherlock
     {
         public static PlayerControl sherlock;
@@ -5790,7 +5809,8 @@ namespace TheOtherRoles
             RoleInfo.niceSwapper,
             RoleInfo.evilSwapper,
             RoleInfo.mayor,
-            RoleInfo.bait
+            RoleInfo.bait,
+            RoleInfo.evilmayor
         };
 
         public static List<RoleInfo> Detect = new()
@@ -6628,4 +6648,7 @@ namespace TheOtherRoles
             futureShift = null;
         }
     }*/
+
+
 }
+

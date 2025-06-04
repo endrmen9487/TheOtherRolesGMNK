@@ -176,6 +176,12 @@ namespace TheOtherRoles {
         public static CustomOption mayorMeetingButton;
         public static CustomOption mayorMaxRemoteMeetings;
 
+        public static CustomOption evilmayorSpawnRate;
+        public static CustomOption evilmayorNumVotes;
+        public static CustomOption evilmayorMaxRemoteMeetings;
+        public static CustomOption evilmayorMeetingButton;
+
+
         public static CustomOption portalmakerSpawnRate;
         public static CustomOption portalmakerCooldown;
         public static CustomOption portalmakerUsePortalCooldown;
@@ -959,6 +965,11 @@ namespace TheOtherRoles {
             mayorNumVotes = CustomOption.Create(81, Types.Crewmate, "mayorNumVotes", 2f, 2f, 24f, 1f, mayorSpawnRate, false, "unitVotes");
             mayorMeetingButton = CustomOption.Create(83, Types.Crewmate, "mayorMeetingButton", true, mayorSpawnRate);
             mayorMaxRemoteMeetings = CustomOption.Create(84, Types.Crewmate, "mayorMaxRemoteMeetings", 1f, 1f, 5f, 1f, mayorMeetingButton, false, "unitShots");
+
+            evilmayorSpawnRate = CustomOption.Create(85, Types.Impostor, cs(EvilMayor.color, "evilmayor"), rates, null, true);
+            evilmayorNumVotes = CustomOption.Create(86, Types.Impostor, "evilmayorNumVotes", 2f, 2f, 24f, 1f, evilmayorSpawnRate, false, "unitVotes");
+            evilmayorMeetingButton = CustomOption.Create(87, Types.Impostor, "evilmayorMeetingButton", true, evilmayorSpawnRate);
+            evilmayorMaxRemoteMeetings = CustomOption.Create(88, Types.Impostor, "evilmayorMaxRemoteMeetings", 1f, 1f, 5f, 1f, evilmayorMaxRemoteMeetings, false, "unitShots");
 
             engineerSpawnRate = CustomOption.Create(90, Types.Crewmate, cs(Engineer.color, "engineer"), rates, null, true);
             engineerNumberOfFixes = CustomOption.Create(91, Types.Crewmate, "engineerNumberOfFixes", 1f, 1f, 6f, 1f, engineerSpawnRate, false, "unitShots");
