@@ -278,6 +278,8 @@ namespace TheOtherRoles.Modules
             Yasuna.evilYasunaOnAcheivementActivate();
             MimicK.onAchievementActivate();
             MimicA.onAchievementActivate();
+            EvilMayor.onAchievementActivate();
+            GreanEyeMonster.onAchievementActivate();
         }
 
         public bool IsHidden

@@ -35,7 +35,11 @@ namespace TheOtherRoles
     public class TheOtherRolesPlugin : BasePlugin
     {
         public const string Id = "me.eisbison.theotherroles";
+<<<<<<< HEAD
         public const string VersionString = "4.8.3.3";
+=======
+        public const string VersionString = "4.8.3.3.0";
+>>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
         public static uint betaDays = 0;  // amount of days for the build to be usable (0 for infinite!)
 
         public static Version Version = Version.Parse(VersionString);

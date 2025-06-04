@@ -192,7 +192,16 @@ namespace TheOtherRoles.Modules {
                     color = new Color32(252, 194, 100, byte.MaxValue),
                     shadow = new Color32(197, 98, 54, byte.MaxValue),
                     isLighterColor = false
+                },
+                new CustomColor
+                {
+                    longname = "colorNK", // 42
+                    color = new Color32(163, 163, 217, byte.MaxValue),
+                    shadow = new Color32(90, 90, 173, byte.MaxValue),
+                    isLighterColor = false
                 }
+
+
             };
 
             pickableColors += (uint)colors.Count; // Colors to show in Tab
