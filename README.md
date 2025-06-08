@@ -29,7 +29,7 @@ TheOtherRolesGMNK made by NotKomi
 | [Serial Killer](#serial-killer) | [Tracker](#tracker)               |                                 |           |
 | [Neko-Kabocha](#neko-kabocha)   | [Bait](#bait)                     |                                 |           |
 | [Evil Watcher](#Watcher)        | [Madmate](#madmate)               |                                 |           |
-|                                 | [Medium](#medium)                 |                                 |           |
+| [Evil Mayor](#Mayor)        | [Medium](#medium)                 |                         |           |
 |                                 | [Fortune Teller](#fortune-teller) |                                 |           |
 |                                 | [Nice Watcher](#Watcher)          |                                 |           |
 
