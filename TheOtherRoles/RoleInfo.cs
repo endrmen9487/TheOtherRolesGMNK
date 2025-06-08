@@ -128,11 +128,10 @@ namespace TheOtherRoles
         //NotKomi
 
         public static RoleInfo greaneyemonster = new("greaneyemonster", GreanEyeMonster.Color, RoleId.GreanEyeMonster, true);
-<<<<<<< HEAD
+
         public static RoleInfo evilmayor = new("evilmayor", Palette.ImpostorRed, RoleId.EvilMayor, true);
-=======
-        public static RoleInfo evilmayor = new("evilmayor", Palette.ImpostorRoleRed, RoleId.EvilMayor, true);
->>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
+
+
         public static RoleInfo legislator = new("legislator", Legislator.Color, RoleId.Legislator, true);
 
 
@@ -256,10 +255,7 @@ namespace TheOtherRoles
             //NotKomi
 
             greaneyemonster,
-<<<<<<< HEAD
-=======
             evilmayor,
->>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
             legislator,
 
         };

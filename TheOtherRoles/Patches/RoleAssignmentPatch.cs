@@ -137,7 +137,7 @@ namespace TheOtherRoles.Patches {
             impSettings.Add((byte)RoleId.Blackmailer, CustomOptionHolder.blackmailerSpawnRate.getSelection());
             impSettings.Add((byte)RoleId.Yoyo, CustomOptionHolder.yoyoSpawnRate.getSelection());
             //NK Impostor Roles
-            impSettings.Add((byte)RoleId.EvilMayor, CustomOptionHolder.EvilMayorSpawnRate.getSelection());
+            impSettings.Add((byte)RoleId.EvilMayor, CustomOptionHolder.evilmayorSpawnRate.getSelection());
             //impSettings.Add((byte)RoleId.Bomber, CustomOptionHolder.bomberSpawnRate.getSelection());
 
             neutralSettings.Add((byte)RoleId.Jester, CustomOptionHolder.jesterSpawnRate.getSelection());

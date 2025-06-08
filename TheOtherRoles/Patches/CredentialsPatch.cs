@@ -13,7 +13,7 @@ using UnityEngine;
 namespace TheOtherRoles.Patches {
     [HarmonyPatch]
     public static class CredentialsPatch {
-        public static string fullCredentialsVersion = $"<size=130%>{Helpers.GradientColorText("FFD700", "FF0000", $"TheOtherRoles GM IA")}</size>" + $" v{TheOtherRolesPlugin.Version.ToString() + (TheOtherRolesPlugin.betaDays > 0 ? "-BETA" : "")}";
+        public static string fullCredentialsVersion = $"<size=130%>{Helpers.GradientColorText("5A5AAD", "5A5AAD", $"TheOtherRoles GM NK")}</size>" + $" v{TheOtherRolesPlugin.Version.ToString() + (TheOtherRolesPlugin.betaDays > 0 ? "-BETA" : "")}";
         /*  public static string fullCredentialsVersion = 
   $@"<size=130%><color=#ff351f>TheOtherRoles GM IA</color></size> v{TheOtherRolesPlugin.Version.ToString() + (TheOtherRolesPlugin.betaDays>0 ? "-BETA": "")}"; */
         public static string fullCredentials = "fullCredentials";
@@ -166,17 +166,7 @@ namespace TheOtherRoles.Patches {
                 }
             }
 
-            public static async Task loadMOTDs()
-            {
-                HttpClient client = new();
-                HttpResponseMessage response = await client.GetAsync(Helpers.isChinese() ? "https://gitee.com/dabaoimp11/GMIAMOTDs/raw/master/MOTDs.txt" : "https://raw.githubusercontent.com/dabao40/GMIAMOTDs/main/MOTDs.txt");
-                response.EnsureSuccessStatusCode();
-                string motds = await response.Content.ReadAsStringAsync();
-                foreach (string line in motds.Split("\n", StringSplitOptions.RemoveEmptyEntries))
-                {
-                    MOTD.motds.Add(line);
-                }
-            }
+           
         }
     }
 }

@@ -78,6 +78,32 @@ namespace TheOtherRoles.Patches
                     }
                 }
 
+                for (int i = 0; i < __instance.playerStates.Length; i++)
+                {
+                    PlayerVoteArea playerVoteArea = __instance.playerStates[i];
+                    if (playerVoteArea.VotedFor is not 252 and not 255 and not 254)
+                    {
+                        PlayerControl player = Helpers.playerById((byte)playerVoteArea.TargetPlayerId);
+                        if (player == null || player.Data == null || player.Data.IsDead || player.Data.Disconnected) continue;
+                        if (player == MimicA.mimicA && MimicK.mimicK != null && MimicK.hasOneVote && !MimicK.mimicK.Data.IsDead) continue;
+                        if (player == BomberB.bomberB && BomberA.bomberA != null && BomberA.hasOneVote && !BomberA.bomberA.Data.IsDead) continue;
+
+                        var amMayorEnabled = EvilMayor.evilmayor != null && EvilMayor.evilmayor.PlayerId == playerVoteArea.TargetPlayerId;
+                        if (amMayorEnabled)
+                            EvilMayor.unlockAch(playerVoteArea.VotedFor);
+                        if (Detective.detective != null && Detective.detective.PlayerId == playerVoteArea.TargetPlayerId)
+                            Detective.unlockAch(playerVoteArea.VotedFor);
+                        if (Jester.jester != null && Jester.jester.PlayerId != playerVoteArea.TargetPlayerId && playerVoteArea.VotedFor == Jester.jester.PlayerId)
+                            Jester.unlockAch();
+
+                        int additionalVotes = (EvilMayor.evilmayor != null && EvilMayor.evilmayor.PlayerId == playerVoteArea.TargetPlayerId) ? EvilMayor.numVotes : 1; // Mayor vote
+                        if (dictionary.TryGetValue(playerVoteArea.VotedFor, out int currentVotes))
+                            dictionary[playerVoteArea.VotedFor] = currentVotes + additionalVotes;
+                        else
+                            dictionary[playerVoteArea.VotedFor] = additionalVotes;
+                    }
+                }
+
                 if (Swapper.swapper != null && !Swapper.swapper.Data.IsDead)
                 {
                     swapped1 = null;
@@ -277,6 +303,10 @@ namespace TheOtherRoles.Patches
                         // Major vote, redo this iteration to place a second vote
                         if (Mayor.mayor != null && voterState.VoterId == (sbyte)Mayor.mayor.PlayerId && votesApplied[voterState.VoterId] < Mayor.numVotes) {
                             j--;    
+                        }
+                        if (EvilMayor.evilmayor != null && voterState.VoterId == (sbyte)EvilMayor.evilmayor.PlayerId && votesApplied[voterState.VoterId] < EvilMayor.numVotes)
+                        {
+                            j--;
                         }
                     }
                 }

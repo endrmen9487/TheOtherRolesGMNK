@@ -433,8 +433,8 @@ namespace TheOtherRoles {
         public static CustomOption greaneyemonsterSpawnRate;
         public static CustomOption greaneyemonsterKillCoolDown;
         public static CustomOption greaneyemonsterWaiForNextMeeting;
+        
 
-        public static CustomOption EvilMayorSpawnRate;
 
 
         //public static CustomOption lawyerIsProsecutorChance;
@@ -1153,9 +1153,9 @@ namespace TheOtherRoles {
 
             //NotKomi
 
-            greaneyemonster = CustomOption.Create(987, Types.Neutral, "GreanEyeMonsterJealousCooldown", 30f, 10f, 60f, 2.5f, greaneyemonsterSpawnRate, false, "unitSeconds");
-            greaneyemonsterKillCoolDown = CustomOption.Create(988, Types.Neutral, "GreanEyeMonsterKillCooldown", 30f, 10f, 60f, 2.5f, greaneyemonsterSpawnRate, false, "unitSeconds");
-            greaneyemonsterSpawnRate = CustomOption.Create(989, Types.Neutral, cs(Thief.color, "thief"), rates, null, true);
+            //greaneyemonster = CustomOption.Create(987, Types.Neutral, "GreanEyeMonsterJealousCooldown", 30f, 10f, 60f, 2.5f, greaneyemonsterSpawnRate, false, "unitSeconds");
+            //greaneyemonsterKillCoolDown = CustomOption.Create(988, Types.Neutral, "GreanEyeMonsterKillCooldown", 30f, 10f, 60f, 2.5f, greaneyemonsterSpawnRate, false, "unitSeconds");
+            //greaneyemonsterSpawnRate = CustomOption.Create(989, Types.Neutral, cs(Thief.color, "thief"), rates, null, true);
 
             /*trapperSpawnRate = CustomOption.Create(410, Types.Crewmate, cs(Trapper.color, "Trapper"), rates, null, true);
             trapperCooldown = CustomOption.Create(420, Types.Crewmate, "Trapper Cooldown", 30f, 5f, 120f, 5f, trapperSpawnRate);

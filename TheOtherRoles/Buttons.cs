@@ -115,6 +115,7 @@ namespace TheOtherRoles
         //GMNK Roles
 
         public static CustomButton greaneyemonsterButton;
+        public static CustomButton evilmayorMeetingButton;
 
         //public static CustomButton trapperButton;
         //public static CustomButton bomberButton;
@@ -217,6 +218,7 @@ namespace TheOtherRoles
             assassinButton.MaxTimer = Assassin.cooldown;
             thiefKillButton.MaxTimer = Thief.cooldown;
             mayorMeetingButton.MaxTimer = GameManager.Instance.LogicOptions.GetEmergencyCooldown();
+            evilmayorMeetingButton.MaxTimer = GameManager.Instance.LogicOptions.GetEmergencyCooldown();
             ninjaButton.MaxTimer = Ninja.stealthCooldown;
             serialKillerButton.MaxTimer = SerialKiller.suicideTimer;
             archaeologistDetectButton.MaxTimer = Archaeologist.cooldown;
@@ -4238,6 +4240,48 @@ namespace TheOtherRoles
                false,
                ModTranslation.getString("mayorEmergencyMeetingText")
            );
+
+
+            evilmayorMeetingButton = new CustomButton(
+            () => {
+                PlayerControl.LocalPlayer.NetTransform.Halt(); // Stop current movement 
+                EvilMayor.remoteMeetingsLeft--;
+
+                if (Mathf.RoundToInt(CustomOptionHolder.mayorMaxRemoteMeetings.getFloat()) - EvilMayor.remoteMeetingsLeft >= 3)
+           _ = new StaticAchievementToken("evilmayor.another1");
+
+            Helpers.handleVampireBiteOnBodyReport(); // Manually call Vampire handling, since the CmdReportDeadBody Prefix won't be called
+            Helpers.HandleUndertakerDropOnBodyReport();
+            Helpers.handleTrapperTrapOnBodyReport();
+            RPCProcedure.uncheckedCmdReportDeadBody(PlayerControl.LocalPlayer.PlayerId, Byte.MaxValue);
+
+            MessageWriter writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)CustomRPC.UncheckedCmdReportDeadBody, Hazel.SendOption.Reliable, -1);
+            writer.Write(PlayerControl.LocalPlayer.PlayerId);
+            writer.Write(Byte.MaxValue);
+            AmongUsClient.Instance.FinishRpcImmediately(writer);
+            evilmayorMeetingButton.Timer = 1f;
+                },
+            () => { return EvilMayor.evilmayor != null && EvilMayor.evilmayor == PlayerControl.LocalPlayer && !PlayerControl.LocalPlayer.Data.IsDead && EvilMayor.meetingButton; },
+            () => {
+            evilmayorMeetingButton.actionButton.OverrideText(ModTranslation.getString("mayorEmergencyLeftText") + " (" + Mayor.remoteMeetingsLeft + ")");
+            bool sabotageActive = false;
+            foreach (PlayerTask task in PlayerControl.LocalPlayer.myTasks.GetFastEnumerator())
+                if (task.TaskType == TaskTypes.FixLights || task.TaskType == TaskTypes.RestoreOxy || task.TaskType == TaskTypes.ResetReactor || task.TaskType == TaskTypes.ResetSeismic || task.TaskType == TaskTypes.FixComms || task.TaskType == TaskTypes.StopCharles
+               || (SubmergedCompatibility.IsSubmerged && task.TaskType == SubmergedCompatibility.RetrieveOxygenMask))
+               sabotageActive = true;
+       return !sabotageActive && PlayerControl.LocalPlayer.CanMove && (EvilMayor.remoteMeetingsLeft > 0);
+        },
+        () => { evilmayorMeetingButton.Timer = evilmayorMeetingButton.MaxTimer; },
+        EvilMayor.getMeetingSprite(),
+        CustomButton.ButtonPositions.upperRowLeft,
+        __instance,
+        KeyCode.F,
+        true,
+        0f,
+        () => { },
+        false,
+        ModTranslation.getString("mayorEmergencyMeetingText")
+        );
 
             // Trapper button
             //trapperButton = new CustomButton(

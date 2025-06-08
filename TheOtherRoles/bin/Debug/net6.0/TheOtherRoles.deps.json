@@ -8,11 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "TheOtherRoles/1.0.0": {
         "dependencies": {
-<<<<<<< HEAD
           "AmongUs.GameLibs.Steam": "2025.3.31",
-=======
-          "AmongUs.GameLibs.Steam": "2025.3.25",
->>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
           "BepInEx.IL2CPP.MSBuild": "2.1.0-rc.1",
           "BepInEx.Unity.IL2CPP": "6.0.0-be.733",
           "Reactor": "2.4.0-ci.344"
@@ -21,11 +17,7 @@
           "TheOtherRoles.dll": {}
         }
       },
-<<<<<<< HEAD
       "AmongUs.GameLibs.Steam/2025.3.31": {},
-=======
-      "AmongUs.GameLibs.Steam/2025.3.25": {},
->>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
       "AsmResolver/6.0.0-beta.1": {
         "runtime": {
           "lib/net6.0/AsmResolver.dll": {
@@ -854,21 +846,12 @@
       "serviceable": false,
       "sha512": ""
     },
-<<<<<<< HEAD
     "AmongUs.GameLibs.Steam/2025.3.31": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-wbwZPpxDLfa4orXnZzY2+jdu0A2gKpRZTgDvk56STbhyUAhXLQmf8gt31z1nGI5GosPjmAjd/BT+agfwHqGLgQ==",
       "path": "amongus.gamelibs.steam/2025.3.31",
       "hashPath": "amongus.gamelibs.steam.2025.3.31.nupkg.sha512"
-=======
-    "AmongUs.GameLibs.Steam/2025.3.25": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2QxQXgZDcQOdAIDXrNLrQ7veEzD6EBzuaRjzSbHptWUPUsuVc3I5Ur3xMkPPwmSGsDHjLuAGE84yRjV6oJxGxw==",
-      "path": "amongus.gamelibs.steam/2025.3.25",
-      "hashPath": "amongus.gamelibs.steam.2025.3.25.nupkg.sha512"
->>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
     },
     "AsmResolver/6.0.0-beta.1": {
       "type": "package",

@@ -4,11 +4,7 @@
         <Version>1.0.0</Version>
         <Description>TheOtherRolesGMNK</Description>
         <Authors>NotKomi</Authors>
-<<<<<<< HEAD
-		<LangVersion>latest</LangVersion>
-=======
-		<LangVersion>preview</LangVersion>
->>>>>>> 95d15400d08eb0155a8080e79a2da0fb2bbdd1e0
+        <LangVersion>latest</LangVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
         <PlatformTarget>x86</PlatformTarget>
